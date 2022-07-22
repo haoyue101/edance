@@ -1,7 +1,6 @@
 package util
 
 import (
-	"edance/util/xlog"
 	"os"
 	"strings"
 )
@@ -43,11 +42,11 @@ func CreateIfNotExist(file string) (*os.File, error) {
 	}
 	err := os.MkdirAll(GetFileDir(file), os.ModePerm)
 	if err != nil {
-		return nil, xlog.Wrap(err)
+		return nil, Wrap(err)
 	}
 	filePtr, err := os.Create(file)
 	if err != nil {
-		return nil, xlog.Wrap(err)
+		return nil, Wrap(err)
 	}
 	return filePtr, nil
 }

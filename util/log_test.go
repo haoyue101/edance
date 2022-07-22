@@ -1,4 +1,4 @@
-package xlog
+package util
 
 import (
 	"errors"
